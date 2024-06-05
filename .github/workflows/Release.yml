@@ -26,9 +26,9 @@ jobs:
         name: fetching the tags
 
       # Get the version of the tag
-      - id: get_version
-        uses: CarterChen247/version-retriever@v1
+     # - id: get_version
+      - uses: CarterChen247/version-retriever@v1
         name: Get the tags
-      - run: echo Version= ${{ steps.get_version.outputs.version }}
+      - run: echo Version= ${{ steps.version-retriever.outputs.version }}
       # - run: echo Version= ${{ steps.get_version.outputs.version-without-v }}
       

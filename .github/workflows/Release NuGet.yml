@@ -54,7 +54,7 @@ jobs:
 
       - name: Push
         #run: dotnet nuget push src/PersonneClassLibrairy/PersonneClassLibrairy/bin/Release/PersonneClassLibrairy.${{ github.ref_name }}.nupkg -s https://api.nuget.org/v3/index.json -k ${{env.GITHUB_TOKEN}} 
-        run: dotnet nuget push src/PersonneClassLibrairy/PersonneClassLibrairy/bin/Release/PersonneClassLibrairy.${{ github.ref_name }}.nupkg -k ${{env.GITHUB_TOKEN}} 
+        run: dotnet nuget push src/PersonneClassLibrairy/PersonneClassLibrairy/bin/Release/PersonneClassLibrairy.${{ github.ref_name }}.nupkg -s https://nuget.pkg.github.com/angoudjou/index.json -k ${{env.GITHUB_TOKEN}} 
         env:
           GITHUB_TOKEN: ${{ secrets.NUGET_API_KEY }}
 

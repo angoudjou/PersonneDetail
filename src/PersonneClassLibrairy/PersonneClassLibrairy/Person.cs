@@ -14,5 +14,9 @@ namespace PersonneClassLibrairy
         public DateOnly DOB { get; set; }= default(DateOnly);
 
         public ICollection<Identification> identification { get; set; }
+        public int CalAge()
+        {
+            return DateTime.Now.Year- DOB.Year;
+        }
     }
 }

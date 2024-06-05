@@ -51,6 +51,9 @@ jobs:
       
       - name: Pack
         run: dotnet pack ${{env.PERSON_APP_PATH}} -c Release -p:PackageVersion=${{ github.ref_name }}
-       
+
+      - name: Push
+        run: dotnet nuget push ${{env.PERSON_APP_PATH}}\bin\Release\PersonneClassLibrairy.${{ github.ref_name }}.nupkg -s https://nuget.pkg.github.com/angoudjou/PersonneDetail/index.json -UserName angoudjou --password ${{ github.repository_owner.GITHUB_TOKEN }}
+        
 
 

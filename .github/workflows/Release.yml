@@ -22,7 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - run: git fetch --no-tags
+      - run: git fetch --no-tags origin
         name: fetching the tags
 
       # Get the version of the tag

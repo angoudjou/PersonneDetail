@@ -8,12 +8,12 @@ namespace PersonneClassLibrairy
 {
     public  class Person
     {
-        public string ID { get; set; }
+        public string ID { get; set; } = Guid.NewGuid().ToString();
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public DateOnly DOB { get; set; }= default(DateOnly);
-
-        public ICollection<Identification> identification { get; set; }
+        
+        public ICollection<Identification> Identification { get; set; } = new List<Identification>();
         public int CalAge()
         {
             return DateTime.Now.Year- DOB.Year;

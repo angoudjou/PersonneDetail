@@ -27,8 +27,8 @@ jobs:
 
       # Get the version of the tag
       - id: get_version
-        uses: battila7/get-version-action@v2
+        uses: CarterChen247/version-retriever@v1
         name: Get the tags
-      - run: echo Verion= ${{ steps.get_version.outputs.version }}
-      - run: echo Version= ${{ steps.get_version.outputs.version-without-v }}
+      - run: echo Version= ${{ steps.get_version.outputs.version }}
+      # - run: echo Version= ${{ steps.get_version.outputs.version-without-v }}
       

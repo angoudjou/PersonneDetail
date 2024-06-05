@@ -60,6 +60,6 @@ jobs:
         run: dotnet nuget push src/PersonneClassLibrairy/PersonneClassLibrairy/bin/Release/PersonneClassLibrairy.${{ github.ref_name }}.nupkg -s https://github.com/angoudjou/PersonneDetail -k ${{env.GITHUB_TOKEN}} 
         
         env:
-          GITHUB_TOKEN: ${{ secrets.NUGET_API_PAT }}
+          GITHUB_TOKEN: ${{ secrets.NUGET_API_KEY }}
 
 

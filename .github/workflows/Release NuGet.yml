@@ -9,7 +9,8 @@ on:
     tags: 
       - "v[0-9]+.[0-9]+.[0-9]+"
       - "[0-9]+.[0-9]+.[0-9]+"
-
+permissions: 
+   packages: write
   # Allows you to run this workflow manually from the Actions tab
 #  workflow_dispatch:
     

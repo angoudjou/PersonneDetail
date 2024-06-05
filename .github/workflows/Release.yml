@@ -22,9 +22,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - run: git fetch --all
-      #--no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+      
+      - run: |
+         git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+         git branch --remote --contains | grep origin/main
         name: fetching the tags
+        
       - run:  git branch --remote --contains | grep origin/main
         name: display tags
       - run: echo ${{github.ref_name}}

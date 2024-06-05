@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Release
 
 # Controls when the workflow will run
 on:
@@ -34,6 +34,6 @@ jobs:
         id: get_version
         uses: battila7/get-version-action@v2
 
-      - run: ${{ steps.get_version.outputs.version-without-v }}
+      - run: echo ${{ steps.get_version.outputs.version-without-v }}
         name: version
       

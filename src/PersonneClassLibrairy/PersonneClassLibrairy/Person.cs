@@ -11,9 +11,10 @@ namespace PersonneClassLibrairy
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
+        public string FullName { get { return $"{FirstName} {LastName}"; }   }
         public DateOnly DOB { get; set; }= default(DateOnly);
         
-        public ICollection<Identification> Identification { get; set; } = new List<Identification>();
+        public virtual ICollection<Identification> Identification { get; set; } = new List<Identification>();
         public int CalAge()
         {
             return DateTime.Now.Year- DOB.Year;

@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
      SOLUTION_PATH: src/PersonneClassLibrairy/PersonneClassLibrairy.sln
+     PERSON_APP_PATH: src/PersonneClassLibrairy/PersonneClassLibrairy/PersonneClassLibrairy.csproj
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,7 +48,7 @@ jobs:
         run: dotnet build $SOLUTION_PATH   --no-restore -c release
       
       - name: Pack
-        run: dotnet pack ${{env.SOLUTION_PATH}}/PersonneClassLibrairy.csproj -c Release -p:PackageVersion=${{ github.ref_name }}
+        run: dotnet pack ${{env.PERSON_APP_PATH}}-c Release -p:PackageVersion=${{ github.ref_name }}
        
 
 

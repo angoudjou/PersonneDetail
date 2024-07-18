@@ -8,6 +8,6 @@
     <RepositoryUrl>https://github.com/angoudjou/TenantLib</RepositoryUrl>
   </PropertyGroup>
    <ItemGroup>
-    <PackageReference Include="TenantPlugIn" Version="0.0.13" />
+    <PackageReference Include="TenantPlugIn" Version="*" />
   </ItemGroup>
 </Project>
